@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How to Use AI: What Matters</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --text: #111;
+      --muted: #555;
+      --line: #ddd;
+      --soft: #f7f7f7;
+      --max: 860px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.55;
+    }
+
+    main {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 42px 0 64px;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 32px;
+      padding-bottom: 22px;
+    }
+
+    h1, h2, h3 { line-height: 1.15; margin: 0 0 14px; }
+    h1 { font-size: clamp(2rem, 7vw, 4.5rem); letter-spacing: -0.05em; }
+    h2 { font-size: clamp(1.45rem, 4vw, 2.2rem); margin-top: 42px; }
+    h3 { font-size: 1.15rem; margin-top: 22px; }
+
+    p { margin: 0 0 16px; font-size: clamp(1rem, 2.2vw, 1.15rem); }
+
+    .lede {
+      font-size: clamp(1.2rem, 3vw, 1.7rem);
+      max-width: 760px;
+    }
+
+    .formula {
+      margin: 24px 0;
+      padding: 18px;
+      border: 1px solid var(--line);
+      background: var(--soft);
+      font-size: clamp(1.35rem, 5vw, 2.4rem);
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: -0.03em;
+    }
+
+    .rule {
+      border-top: 1px solid var(--line);
+      margin: 34px 0;
+    }
+
+    figure {
+      margin: 26px 0 34px;
+      padding: 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #fff;
+    }
+
+    figcaption {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-top: 8px;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin: 0 0 18px;
+      font-size: clamp(1rem, 2.2vw, 1.15rem);
+    }
+
+    li { margin-bottom: 8px; }
+
+    .callout {
+      border-left: 4px solid #111;
+      background: var(--soft);
+      padding: 16px 18px;
+      margin: 24px 0;
+    }
+
+    .two-up {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      align-items: start;
+    }
+
+    .small-note { color: var(--muted); }
+
+    footer {
+      border-top: 1px solid var(--line);
+      margin-top: 44px;
+      padding-top: 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 720px) {
+      main { width: min(100% - 22px, var(--max)); padding-top: 26px; }
+      .two-up { grid-template-columns: 1fr; }
+      h2 { margin-top: 34px; }
+      figure { margin: 20px 0 28px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>How to Use AI: What Matters</h1>
+      <p class="lede">it's only predicting the next word.</p>
+    </header>
+
+    <section>
+      <div class="formula">words in → prediction</div>
+      <figure>
+        <img src="blog-left-to-right-words-in-words-out.png" alt="Left-to-right visual showing words going into an AI and words coming out." loading="lazy" />
+        <figcaption>this is the entire trick, it takes in words and then outputs words</figcaption>
+      </figure>
+
+      <p>it all starts here, it only has words</p>
+      <p>another way of thinking about it:</p>
+      <div class="formula">words → action</div>
+      <p>it's really putting words to action, (action in the way of meaning it produces words)</p>
+
+      <figure>
+        <img src="text-in-text-out-ai-blue-cool.png" alt="Text input and text output AI illustration." loading="lazy" />
+        <figcaption>words in, words out.</figcaption>
+      </figure>
+    </section>
+
+    <div class="rule"></div>
+
+    <section>
+      <div class="callout">
+        <p><strong>this is fundamentally what is going on. like that is it.....everything else is built up from that.</strong></p>
+      </div>
+
+      <h2>the external “what matters”</h2>
+      <p>but what does that mean exactly?</p>
+      <p>the ai doesnt have an external 'what matters'</p>
+      <p>it only has an internal representation of 'what matters' in relation to the next words it's producing.</p>
+
+      <div class="callout">
+        <p><strong>you need to provide the external 'what matters'.</strong></p>
+      </div>
+
+      <ul>
+        <li>what to do</li>
+        <li>what not to do</li>
+      </ul>
+      <p>outline precisely what you want</p>
+    </section>
+
+    <section>
+      <h2>prompts are usually too short</h2>
+      <p>generally prompts are too short, you really want to dump in as much detail, context, and information as you can.</p>
+      <p>generally i find a nice back and forth style conversation, with gradual refinements to be effective and nice way of going about things.</p>
+      <p>like dump a bunch of data and stuff in it and then mold it like a clay vase on a spinning wheel.</p>
+      <p>take it step by step of what you want and refine it.</p>
+
+      <figure>
+        <img src="gradient-get-better-diffusion.png" alt="Four progressively more defined images from rough to refined." loading="lazy" />
+        <figcaption>craft and mold what you want like you would clay with your hands. start rough, then keep shaping it.</figcaption>
+      </figure>
+
+      <div class="callout">
+        <p><strong>using small less capable models is a good way to learn actually.</strong> it makes you think deeper about how to get it to do what you want</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>agentic ai</h2>
+      <p>originally computers were controlled via text only. think old school 70s, keyboard only, the world before gui's.</p>
+
+      <div class="two-up">
+        <figure>
+          <img src="old-school-cmd-prompt-computer-human.png" alt="Old school command prompt computer controlled by a human." loading="lazy" />
+          <figcaption>before gui's, you typed words into the machine and the words controlled the computer.</figcaption>
+        </figure>
+        <figure>
+          <img src="blob-cmd-term-mac-control.png" alt="Character using words in a command prompt to control a computer." loading="lazy" />
+          <figcaption>agentic ai is kind of bringing that back: words coming out, then those words do things on the computer.</figcaption>
+        </figure>
+      </div>
+
+      <figure>
+        <img src="ditto-tool-harness.png" alt="Ditto-like character wearing a tool harness with tool names like web search, read, write, list, call program, and send text." loading="lazy" />
+        <figcaption>the harness is the tool belt: web_search, read, write, list, call_program, send_text.</figcaption>
+      </figure>
+
+      <p>you can see that the ai directly generates the words that controls the computer via the command line.</p>
+    </section>
+
+    <section>
+      <h2>skills/</h2>
+      <figure>
+        <img src="skills-finder-window.svg" alt="macOS Finder style window showing a skills folder with a skill text file, shell script, and app icon file." loading="lazy" />
+        <figcaption>a skills/ folder can just be files: text instructions, scripts, icons, workflows.</figcaption>
+      </figure>
+      <p>skills are text files that explain to your ai how to do a certain task, so, it like just makes the ai agent more consistent by giving it precise directions.</p>
+      <p>skills also can have like programs that the agent can run, workflows, etc.</p>
+      <p>in some ways they are kinda like the new iphone apps.</p>
+    </section>
+
+    <footer>
+      <p>Drafted from <code>words.txt</code> in <code>projects/how-to-use-ai-what-matters</code>.</p>
+    </footer>
+  </main>
+</body>
+</html>

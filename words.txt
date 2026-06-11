@@ -1,0 +1,69 @@
+it's only predicting the next word. 
+
+
+words in -> prediction
+
+this is the entire trick, it takes in words and then outputs words
+
+[small ditto pic]
+
+it all starts here, it only has words
+
+another way of thinking about it: 
+
+words -> action
+
+it's really putting words to action, (action in the way of meaning it produces words)
+
+-------
+this is fundamentally what is going on. like that is it.....everything else is built up from that. 
+-------
+but what does that mean exactly?
+
+the ai doesnt have an external 'what matters' 
+
+it only has an internal representation of 'what matters' in relation to the next words it's producing. 
+
+you need to provide the external 'what matters'. 
+-------
+what to do
+what not to do 
+
+outline precisely what you want 
+you need to provide it like a
+
+
+generally prompts are too short, you really want to dump in as much detail, context, and information as you can.
+
+
+[image of 4 left to right progressively more defined images]
+
+generally i find a nice back and forth style conversation, with gradual refinements to be effective and nice way of going about things. 
+
+like dump a bunch of data and stuff in it and then mold it like a clay vase on a spinning wheel. 
+
+take it step by step of what you want and refine it. 
+
+
+----
+using small less capable models is a good way to learn actually. it makes you think deeper about how to get it to do what you want -----
+
+-agentic ai-
+this is a new section that touches on harnesses, and begins with demonstrating old school command prompt computers and how they can control everything. 
+
+
+[image of old school command prompt only computer screen and keyboard being controlled by a human]
+
+[image of ditto character words filling a command prompt and making changes on a computer screen gui, cartoonish, ditto is on the left side white bg, and you can see the words outputting being filled into the cmd prompt on screen ]
+
+
+[image of ditto character with a tool belt harness around it] words like web_search, read, write, list, call_program, send_text]
+
+
+---new section on skills/ ---
+
+skills are text files that explain to your ai how to do a certain task, so, it like just makes the ai agent more consistent by giving it precise directions. skills also can have like programs that the agent can run, workflows, etc. in some ways they are kinda like the new iphone apps. 
+
+[image that shows macos finder directory of folders and skills/, text file in skills, app looking icon as well] 
+
+use canvas to create an md file of this precisely, and then generate the images i have [bracketed], add those then generated img to the md file 
