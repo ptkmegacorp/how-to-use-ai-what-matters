@@ -108,6 +108,432 @@
 
     .small-note { color: var(--muted); }
 
+    .deep-abstractions {
+      border-top: 1px solid var(--line);
+      margin-top: 42px;
+      padding-top: 8px;
+    }
+
+    .abstraction-list {
+      columns: 2;
+      column-gap: 34px;
+      padding-left: 1.1rem;
+    }
+
+    .abstraction-block {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      padding: 20px 22px;
+      margin: 20px 0;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+    }
+
+    .abstraction-block h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.12rem;
+    }
+
+    .abstraction-body p {
+      margin: 0 0 14px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .abstraction-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .abstraction-body ul {
+      margin: 0 0 14px;
+      padding-left: 1.15rem;
+    }
+
+    .abstraction-body li {
+      margin-bottom: 5px;
+      line-height: 1.5;
+    }
+
+    .abstraction-takeaway {
+      border-left: 4px solid #111;
+      background: var(--soft);
+      padding: 12px 14px;
+      margin-top: 16px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .abstraction-takeaway p {
+      margin-bottom: 0;
+      font-size: 0.98rem;
+    }
+
+    .compact-set {
+      border-top: 1px solid var(--line);
+      margin-top: 16px;
+      padding-top: 14px;
+    }
+
+    .compact-set h4 {
+      margin: 0 0 10px;
+      font-size: 1rem;
+    }
+
+    .abstraction-ladder {
+      display: grid;
+      gap: 0;
+      margin: 28px 0 34px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .ladder-step {
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .ladder-step:last-child {
+      border-bottom: none;
+    }
+
+    .ladder-step strong {
+      display: block;
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .ladder-step p {
+      margin: 0;
+      font-size: clamp(1rem, 2.2vw, 1.12rem);
+    }
+
+    .ladder-step a {
+      color: inherit;
+    }
+
+    .ladder-arrow {
+      text-align: center;
+      padding: 6px 0;
+      background: var(--soft);
+      color: var(--muted);
+      font-size: 1.1rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .pattern-rows {
+      display: grid;
+      gap: 10px;
+      margin: 24px 0 10px;
+    }
+
+    .pattern-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      align-items: stretch;
+    }
+
+    .pattern-card {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 14px 16px;
+      background: #fff;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .pattern-row:hover .pattern-card {
+      border-color: #bbb;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .pattern-card--example {
+      background: linear-gradient(180deg, #fafafa 0%, #f3f3f3 100%);
+    }
+
+    .pattern-card h4 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      line-height: 1.25;
+    }
+
+    .pattern-card p {
+      margin: 0;
+      font-size: 0.96rem;
+      line-height: 1.55;
+    }
+
+    .card-kicker {
+      display: block;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .utility-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 18px;
+      margin: 28px 0 14px;
+      counter-reset: utility;
+    }
+
+    .utility-card {
+      --card-accent: #2563eb;
+      --card-accent-soft: #eff6ff;
+      --card-accent-border: #bfdbfe;
+      position: relative;
+      border: 1px solid var(--card-accent-border);
+      border-radius: 14px;
+      background: #fff;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+      transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+    }
+
+    .utility-card::before {
+      counter-increment: utility;
+      content: counter(utility, decimal-leading-zero);
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--card-accent);
+      opacity: 0.55;
+    }
+
+    .utility-card:nth-child(6n + 1) {
+      --card-accent: #2563eb;
+      --card-accent-soft: #eff6ff;
+      --card-accent-border: #bfdbfe;
+    }
+
+    .utility-card:nth-child(6n + 2) {
+      --card-accent: #059669;
+      --card-accent-soft: #ecfdf5;
+      --card-accent-border: #a7f3d0;
+    }
+
+    .utility-card:nth-child(6n + 3) {
+      --card-accent: #d97706;
+      --card-accent-soft: #fffbeb;
+      --card-accent-border: #fde68a;
+    }
+
+    .utility-card:nth-child(6n + 4) {
+      --card-accent: #7c3aed;
+      --card-accent-soft: #f5f3ff;
+      --card-accent-border: #ddd6fe;
+    }
+
+    .utility-card:nth-child(6n + 5) {
+      --card-accent: #db2777;
+      --card-accent-soft: #fdf2f8;
+      --card-accent-border: #fbcfe8;
+    }
+
+    .utility-card:nth-child(6n) {
+      --card-accent: #0891b2;
+      --card-accent-soft: #ecfeff;
+      --card-accent-border: #a5f3fc;
+    }
+
+    .utility-card:hover {
+      border-color: var(--card-accent);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .utility-card-header {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 18px 20px 16px;
+      background: linear-gradient(180deg, var(--card-accent-soft) 0%, #fff 100%);
+      border-bottom: 1px solid var(--card-accent-border);
+      border-left: 5px solid var(--card-accent);
+    }
+
+    .utility-tag {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--card-accent);
+      background: #fff;
+      border: 1px solid var(--card-accent-border);
+      border-radius: 999px;
+      padding: 4px 10px;
+    }
+
+    .utility-card h4 {
+      margin: 0;
+      padding-right: 2rem;
+      font-size: 1.08rem;
+      line-height: 1.25;
+      color: #0f172a;
+    }
+
+    .utility-facts {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      padding: 0;
+    }
+
+    .utility-fact {
+      margin: 0;
+      padding: 14px 18px;
+    }
+
+    .utility-fact:first-child {
+      padding-top: 16px;
+    }
+
+    .utility-visual {
+      padding: 14px 18px 16px;
+      border-bottom: 1px solid var(--card-accent-border);
+      background: linear-gradient(135deg, #fff 0%, var(--card-accent-soft) 100%);
+    }
+
+    .utility-visual--diagram {
+      padding-bottom: 12px;
+    }
+
+    .utility-flow-label {
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--card-accent);
+      margin-bottom: 10px;
+    }
+
+    .utility-glyph-flow {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px 10px;
+    }
+
+    .utility-emoji {
+      font-size: 1.45rem;
+      line-height: 1;
+      filter: saturate(1.05);
+    }
+
+    .utility-arrow {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--card-accent);
+      opacity: 0.85;
+      padding: 0 2px;
+    }
+
+    .utility-chip {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--card-accent);
+      background: #fff;
+      border: 1px solid var(--card-accent-border);
+      border-radius: 999px;
+      padding: 4px 10px;
+      white-space: nowrap;
+    }
+
+    .utility-visual .mermaid {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .utility-visual .mermaid svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .utility-fact dt {
+      margin: 0 0 5px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--card-accent);
+    }
+
+    .utility-fact dd {
+      margin: 0;
+      font-size: 0.94rem;
+      line-height: 1.55;
+      color: #1e293b;
+    }
+
+    .utility-fact--example {
+      width: 100%;
+      padding: 16px 20px;
+      border-top: 1px solid var(--card-accent-border);
+      border-bottom: 1px solid var(--card-accent-border);
+      border-radius: 0;
+      background: var(--card-accent-soft);
+      border-left: none;
+      border-right: none;
+    }
+
+    .utility-fact--example dd {
+      font-style: italic;
+      color: #334155;
+      font-size: 0.98rem;
+    }
+
+    .utility-fact--tools {
+      width: 100%;
+      padding: 14px 18px 18px;
+      border-radius: 0;
+      background: #0f172a;
+      border: none;
+    }
+
+    .utility-fact--tools dt {
+      color: #94a3b8;
+    }
+
+    .utility-fact--tools dd {
+      color: #e2e8f0;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.84rem;
+      line-height: 1.6;
+    }
+
+    @media (min-width: 721px) {
+      .utility-card:nth-child(6n) {
+        grid-column: 1 / -1;
+      }
+
+      .utility-card:nth-child(6n) .utility-glyph-flow,
+      .utility-card:nth-child(6n) .mermaid {
+        justify-content: center;
+      }
+    }
+
     footer {
       border-top: 1px solid var(--line);
       margin-top: 44px;
@@ -119,6 +545,10 @@
     @media (max-width: 720px) {
       main { width: min(100% - 22px, var(--max)); padding-top: 26px; }
       .two-up { grid-template-columns: 1fr; }
+      .pattern-row { grid-template-columns: 1fr; }
+      .abstraction-list { columns: 1; }
+      .utility-grid { grid-template-columns: 1fr; }
+      .utility-card:nth-child(6n) { grid-column: auto; }
       h2 { margin-top: 34px; }
       figure { margin: 20px 0 28px; }
     }
@@ -172,6 +602,16 @@
         <li>outline precisely what you want</li>
         <li>you need to put a perimeter around your problem</li>
       </ul>
+
+      <div class="callout">
+        <p><strong>AI does not know what matters.</strong></p>
+        <p>It predicts what comes next.</p>
+        <p>So your job is not just to ask. Your job is to frame.</p>
+        <p>Context tells it where it is.</p>
+        <p>Constraints tell it what not to do.</p>
+        <p>Examples tell it what shape to copy.</p>
+        <p>Feedback tells it how to improve.</p>
+      </div>
     </section>
 
     <section>
@@ -237,9 +677,1398 @@
       <h2>you can out source your thinking, you cannot out source your understanding</h2>
     </section>
 
+
+    <section class="deep-abstractions" id="twenty-six-abstractions">
+      <h2>26 abstractions</h2>
+      <p>The major AI abstractions are:</p>
+      <ul class="abstraction-list">
+        <li>Compression/reconstruction</li>
+        <li>Conditional simulation</li>
+        <li>Distribution shaping</li>
+        <li>Latent-space navigation</li>
+        <li>Attention allocation</li>
+        <li>Search over possibilities</li>
+        <li>Amortized reasoning</li>
+        <li>Representation translation</li>
+        <li>Constraint satisfaction</li>
+        <li>Uncertainty management</li>
+        <li>Generator/critic separation</li>
+        <li>Feedback control</li>
+        <li>Policy over actions</li>
+        <li>Affordance detection</li>
+        <li>Ontology formation</li>
+        <li>Skill compression</li>
+        <li>Boundary placement</li>
+        <li>Scale-shifting</li>
+        <li>Style as filtering</li>
+        <li>Controlled distortion</li>
+        <li>Synthetic sensing</li>
+        <li>Semantic glue</li>
+        <li>Entropy management</li>
+        <li>Structure amplification</li>
+        <li>Coordination/delegation</li>
+      </ul>
+      <p>Understood. Staying abstract. The IR/runtime concept is: AI output is not “the thing”; it is a representation interpreted by some runtime. Other abstractions at the same level:</p>
+      <article class="abstraction-block">
+        <h3>1. AI as compression</h3>
+        <div class="abstraction-body">
+        <p>A model can be viewed as a huge compression artifact. It compresses patterns from training data into weights, then reconstructs plausible continuations from a prompt.</p>
+        <p>It does not store the world literally — it stores a compressed statistical structure of the world. This explains both power and failure: it can generalize because compression captures patterns; it hallucinates because reconstruction is not retrieval.</p>
+        </div>
+        <div class="abstraction-takeaway">
+          <p><strong>intelligence as lossy compression plus reconstruction</strong></p>
+        </div>
+      </article>
+      <article class="abstraction-block">
+        <h3>2. AI as conditional simulation</h3>
+        <div class="abstraction-body">
+        <p>A prompt does not command the model in a mechanical sense. It conditions a simulator — the model simulates the kind of text, reasoning, persona, task, or world implied by the input.</p>
+        <p>When the prompt says “you are a careful mathematician,” the model enters that distribution. When it says “write a pirate song,” it enters another. This is why framing is so powerful: you are not merely giving instructions, you are setting initial conditions for a simulation.</p>
+        </div>
+        <div class="abstraction-takeaway">
+          <p><strong>prompting as world-state initialization</strong></p>
+        </div>
+      </article>
+      <article class="abstraction-block">
+        <h3>3. AI as distribution shaping</h3>
+        <div class="abstraction-body">
+        <p>The model always has many possible next outputs. Sampling, temperature, system prompts, examples, schemas, and constraints reshape the probability distribution. This abstraction is more fundamental than “asking questions” — you are sculpting the probability landscape.</p>
+        <ul><li>A schema narrows the distribution.</li><li>A style example bends it.</li><li>A low temperature sharpens it; a high temperature widens it.</li><li>A tool list changes what outputs are likely.</li><li>A prior answer becomes momentum.</li></ul>
+        </div>
+        <div class="abstraction-takeaway">
+          <p><strong>AI behavior as probability mass being pushed around</strong></p>
+        </div>
+      </article>
+      <article class="abstraction-block">
+        <h3>4. AI as latent-space navigation</h3>
+        <div class="abstraction-body">
+        <p>The model maps inputs into internal representations. Similar ideas cluster near each other. Reasoning can be seen as movement through this latent space: from vague intent, to concepts, to candidate structures, to output.</p>
+        <p>This is why analogies work. The model can move from “Markdown is a display language” to “JSON tool calls are a display/action language” because those structures are nearby in conceptual space.</p>
+        </div>
+        <div class="abstraction-takeaway">
+          <p><strong>thinking as movement through compressed concept geometry</strong></p>
+        </div>
+      </article>
+      <article class="abstraction-block">
+        <h3>5. AI as attention allocation</h3>
+        <div class="abstraction-body">
+        <p>Attention is not just a transformer mechanism — it is a system-level concept. Any intelligent process must decide what matters now.</p>
+        <p>In AI, attention exists at multiple levels:</p>
+        <ul><li>The model attends to tokens.</li><li>The prompt attends to selected facts.</li><li>The system attends to certain tools.</li><li>The user attends to certain outputs.</li><li>The evaluator attends to certain success criteria.</li></ul>
+        <p>A lot of intelligence is not “knowing more.” It is attending to the right subset.</p>
+        </div>
+        <div class="abstraction-takeaway">
+          <p><strong>intelligence as selective relevance</strong></p>
+        </div>
+      </article>
+      <article class="abstraction-block">
+        <h3>6. AI as search</h3>
+        <div class="abstraction-body">
+        <p>Generation can be understood as search through possible continuations, plans, answers, programs, and explanations. The model proposes candidates; decoding chooses among them; external systems can expand, rank, prune, retry, or verify.</p>
+        <p>This abstraction explains why “one-shot answer” is weak. A stronger system treats output as candidate generation inside a search process.</p>
+        </div>
+        <div class="abstraction-takeaway">
+          <p><strong>AI as proposal engine inside a search space</strong></p>
+        </div>
+      </article>
+      <article class="abstraction-block">
+        <h3>7. AI as amortized reasoning</h3>
+        <div class="abstraction-body">
+        <p>A model often appears to reason instantly because it has compressed many previous reasoning patterns into its weights. Instead of solving every problem from scratch, it uses learned shortcuts.</p>
+        <p>That is amortization: expensive training produces cheap inference. This is why models can be fast and impressive, but brittle on problems outside their learned distribution.</p>
+        </div>
+        <div class="abstraction-takeaway">
+          <p><strong>training stores reusable cognitive shortcuts</strong></p>
+        </div>
+      </article>
+      <article class="abstraction-block">
+        <h3>8. AI as translation between representations</h3>
+        <div class="abstraction-body">
+        <p>AI is often not “answering” — it is translating between representations:</p>
+        <ul><li>Natural language to code</li><li>Image to caption</li><li>Question to SQL</li><li>Messy notes to outline</li><li>Goal to plan, plan to action</li><li>Error log to diagnosis</li><li>Data to explanation</li><li>Text to UI, UI to state</li></ul>
+        <p>This is broader than the IR/runtime idea. The key is not execution — the key is representation change.</p>
+        </div>
+        <div class="abstraction-takeaway">
+          <p><strong>intelligence as representation transformation</strong></p>
+        </div>
+      </article>
+      <article class="abstraction-block">
+        <h3>9. AI as constraint satisfaction</h3>
+        <div class="abstraction-body">
+        <p>A model is constantly satisfying constraints:</p>
+        <ul><li>The grammar must work.</li><li>The answer must fit the prompt.</li><li>The style must match; the facts should cohere.</li><li>The schema must validate; the task goal should be met.</li><li>The next token must be likely.</li></ul>
+        <p>More constraints usually produce more useful output, as long as they are not contradictory. This reframes prompting as constraint design.</p>
+        </div>
+        <div class="abstraction-takeaway">
+          <p><strong>prompting as constraint programming in natural language</strong></p>
+        </div>
+      </article>
+      <article class="abstraction-block">
+        <h3>10. AI as an uncertainty engine</h3>
+        <div class="abstraction-body">
+        <p>A model does not truly “know” one answer internally — it has distributions over possible answers. Confidence, ambiguity, hallucination, creativity, and disagreement all come from this.</p>
+        <p>Bad systems collapse uncertainty too early. Good systems preserve uncertainty until verification or choice. Examples:</p>
+        <ul><li>“Maybe these three causes.”</li><li>“Here are candidate interpretations.”</li><li>“This field is unknown.”</li><li>“This action needs confirmation.”</li><li>“These outputs have ranked likelihood.”</li></ul>
+        </div>
+        <div class="abstraction-takeaway">
+          <p><strong>intelligence as managing uncertainty, not eliminating it</strong></p>
+        </div>
+      </article>
+      <article class="abstraction-block">
+        <h3>11. AI as a critic</h3>
+        <div class="abstraction-body">
+        <p>A model does not only generate — it can evaluate. It can score whether an answer follows instructions, whether a plan is plausible, whether a UI component matches intent, whether a command looks risky, whether a summary preserves meaning.</p>
+        <p>Generation and criticism are different roles. The same architecture can be used as a proposer or as a judge, but those are different abstractions.</p>
+        </div>
+        <div class="abstraction-takeaway">
+          <p><strong>AI as generator versus AI as discriminator</strong></p>
+        </div>
+      </article>
+      <article class="abstraction-block">
+        <h3>12. AI as feedback control</h3>
+        <div class="abstraction-body">
+        <p>Once AI interacts with the world, the key abstraction becomes control. There is a goal, an action, an observation, and an error signal. The system acts again to reduce the gap between current state and desired state.</p>
+        <p>This is different from text generation — it is closed-loop behavior. A non-agentic model produces an output; a control system keeps adjusting until the state changes.</p>
+        </div>
+        <div class="abstraction-takeaway">
+          <p><strong>agency as closed-loop error correction</strong></p>
+        </div>
+      </article>
+      <article class="abstraction-block">
+        <h3>13. AI as policy</h3>
+        <div class="abstraction-body">
+        <p>A policy maps states to actions. This abstraction comes from reinforcement learning, but it applies broadly: given the current situation, what should be done next?</p>
+        <ul><li>A language model can be seen as a policy over tokens.</li><li>An agent model can be seen as a policy over actions.</li><li>A router can be seen as a policy over modules.</li><li>A UI model can be seen as a policy over components.</li></ul>
+        </div>
+        <div class="abstraction-takeaway">
+          <p><strong>intelligence as choosing the next move</strong></p>
+        </div>
+      </article>
+      <article class="abstraction-block">
+        <h3>14. AI as affordance detector</h3>
+        <div class="abstraction-body">
+        <p>An affordance is a possible action implied by the environment:</p>
+        <ul><li>A button affords clicking.</li><li>A text box affords typing.</li><li>A file affords opening; a sentence affords summarizing.</li><li>A table affords querying; a contradiction affords correction.</li></ul>
+        <p>Models are useful when they detect what can be done with a given object or situation.</p>
+        </div>
+        <div class="abstraction-takeaway">
+          <p><strong>understanding as seeing possible operations</strong></p>
+        </div>
+      </article>
+      <article class="abstraction-block">
+        <h3>15. AI as ontology builder</h3>
+        <div class="abstraction-body">
+        <p>The model does not just process facts — it carves the world into categories. It decides what the objects are, what relations matter, what level of description is appropriate, and what distinctions are meaningful.</p>
+        <p>Before solving anything, the system frames the domain. Is this a planning problem? A debugging problem? A design problem? A routing problem? A classification problem? A conflict between constraints?</p>
+        </div>
+        <div class="abstraction-takeaway">
+          <p><strong>intelligence as choosing the right ontology</strong></p>
+        </div>
+      </article>
+      <article class="abstraction-block">
+        <h3>16. AI as compression of procedures into skills</h3>
+        <div class="abstraction-body">
+        <p>Repeated behavior can be compressed into a reusable unit. At first, the system reasons step by step; later, the same pattern becomes a skill, macro, function, habit, or policy.</p>
+        <p>This is how intelligence becomes efficient — deliberate reasoning hardens into automatic procedure.</p>
+        </div>
+        <div class="abstraction-takeaway">
+          <p><strong>learning as turning deliberation into reusable action</strong></p>
+        </div>
+      </article>
+      <article class="abstraction-block">
+        <h3>17. AI as boundary negotiation</h3>
+        <div class="abstraction-body">
+        <p>AI systems constantly negotiate boundaries:</p>
+        <ul><li>What is inside the model versus outside?</li><li>What is language versus action?</li><li>What is user intent versus system policy?</li><li>What is memory versus context?</li><li>What is suggestion versus execution?</li><li>What is uncertain versus confirmed?</li><li>What is generated versus retrieved?</li></ul>
+        <p>Many failures come from bad boundary placement.</p>
+        </div>
+        <div class="abstraction-takeaway">
+          <p><strong>system design as deciding where boundaries live</strong></p>
+        </div>
+      </article>
+      <article class="abstraction-block">
+        <h3>18. AI as scale-shifting</h3>
+        <div class="abstraction-body">
+        <p>AI can move between levels of abstraction — summarize a thousand details into one concept, expand one concept into detailed steps, turn a principle into examples, examples into a rule, a rule into a procedure.</p>
+        <p>This is one of the most important general capabilities.</p>
+        </div>
+        <div class="abstraction-takeaway">
+          <p><strong>intelligence as moving between compression levels</strong></p>
+        </div>
+      </article>
+      <article class="abstraction-block">
+        <h3>19. AI as style-transfer over meaning</h3>
+        <div class="abstraction-body">
+        <p>Style is not superficial — it changes which features are emphasized:</p>
+        <ul><li>A legal style foregrounds definitions and risk.</li><li>A technical style foregrounds mechanism.</li><li>A poetic style foregrounds association.</li><li>A terse style foregrounds selection.</li><li>A tutorial style foregrounds sequence.</li></ul>
+        <p>The same content passed through different styles becomes different cognitive machinery.</p>
+        </div>
+        <div class="abstraction-takeaway">
+          <p><strong>style as an information filter</strong></p>
+        </div>
+      </article>
+      <article class="abstraction-block">
+        <h3>20. AI as meaning-preserving distortion</h3>
+        <div class="abstraction-body">
+        <p>Every model output distorts the input. The question is whether the distortion preserves what matters:</p>
+        <ul><li>Summarization distorts by compression.</li><li>Translation distorts across languages.</li><li>Explanation distorts by simplification.</li><li>Classification distorts by discretization.</li><li>Visualization distorts by projection.</li><li>Analogy distorts by mapping.</li></ul>
+        </div>
+        <div class="abstraction-takeaway">
+          <p><strong>AI transforms information by controlled distortion</strong></p>
+        </div>
+      </article>
+      <article class="abstraction-block">
+        <h3>21. AI as synthetic sensor</h3>
+        <div class="abstraction-body">
+        <p>A model can act like a sensor for things that are not directly measured — tone, intent, topic, risk, ambiguity, contradiction, relevance, salience, sentiment, genre, structure, or implied goal.</p>
+        <p>These are not physical signals. They are semantic signals inferred from data.</p>
+        </div>
+        <div class="abstraction-takeaway">
+          <p><strong>AI as a sensor for latent properties</strong></p>
+        </div>
+      </article>
+      <article class="abstraction-block">
+        <h3>22. AI as semantic glue</h3>
+        <div class="abstraction-body">
+        <p>AI is useful because it can connect systems that were not designed to talk to each other:</p>
+        <ul><li>Humans speak loosely; machines require formality.</li><li>Databases have schemas; UIs have components.</li><li>Files have formats; APIs have contracts.</li></ul>
+        <p>AI sits between incompatible representations and makes them interoperable.</p>
+        </div>
+        <div class="abstraction-takeaway">
+          <p><strong>AI as adapter between mismatched worlds</strong></p>
+        </div>
+      </article>
+      <article class="abstraction-block">
+        <h3>23. AI as entropy manager</h3>
+        <div class="abstraction-body">
+        <p>Raw possibility is high entropy. A model reduces it — a blank page has infinite possibilities; a prompt narrows them; a schema narrows them further; a plan narrows them into sequence; a final answer collapses them into one path.</p>
+        <p>Creativity increases useful entropy; execution reduces entropy. AI systems alternate between expanding and collapsing possibility.</p>
+        </div>
+        <div class="abstraction-takeaway">
+          <p><strong>AI systems alternate between expanding and collapsing possibility</strong></p>
+        </div>
+      </article>
+      <article class="abstraction-block">
+        <h3>24. AI as a mirror with transformation</h3>
+        <div class="abstraction-body">
+        <p>A model often reflects the structure of the input back at you, but transformed:</p>
+        <ul><li>Ask vaguely, get vague shape back.</li><li>Ask with structure, get structure back.</li><li>Ask with assumptions, get those assumptions amplified unless challenged.</li><li>Provide examples, get pattern continuation.</li></ul>
+        <p>This is not just “garbage in, garbage out.” It is more like the model amplifies the latent structure of the input.</p>
+        </div>
+        <div class="abstraction-takeaway">
+          <p><strong>the model amplifies the latent structure of the input</strong></p>
+        </div>
+      </article>
+      <article class="abstraction-block">
+        <h3>25. AI as a coordination layer</h3>
+        <div class="abstraction-body">
+        <p>AI can coordinate between agents, tools, documents, users, tasks, goals, and representations. It does not necessarily do the work itself — it decides who or what should do which part, in what order, under which constraints.</p>
+        <p>This is orchestration at the semantic level.</p>
+        </div>
+        <div class="abstraction-takeaway">
+          <p><strong>AI as task decomposition and delegation machinery</strong></p>
+        </div>
+        <div class="compact-set">
+          <h4>The compact set</h4>
+          <p>The IR/runtime abstraction is about how outputs become operative. These other abstractions are about how meaning is compressed, transformed, selected, constrained, evaluated, grounded, and coordinated.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="deep-abstractions" id="abstraction-to-utility">
+      <h2>from abstraction to real utility</h2>
+      <p>The same ideas appear three times, each step closer to something you can actually build or buy. Start with the abstract pattern, see it in a concrete situation, then name the utility AI or tool that usually does that job.</p>
+
+      <div class="abstraction-ladder">
+        <div class="ladder-step">
+          <strong>Level 1 — abstract</strong>
+          <p><a href="#twenty-six-abstractions">26 abstractions</a> — what intelligence is doing in principle (compression, simulation, search, glue, …).</p>
+        </div>
+        <div class="ladder-arrow">↓</div>
+        <div class="ladder-step">
+          <strong>Level 2 — major examples</strong>
+          <p><a href="#pattern-examples">AI abstraction patterns 02</a> — each pattern with a practical “for example” story.</p>
+        </div>
+        <div class="ladder-arrow">↓</div>
+        <div class="ladder-step">
+          <strong>Level 3 — utility AIs</strong>
+          <p><a href="#utility-ais">AI abstraction patterns 01</a> — named roles, real models, and tools on a machine or in a stack.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p><strong>You are moving down a ladder:</strong> idea → example → product. The abstractions section above is the top. The utility cards at the bottom are the ground.</p>
+      </div>
+
+      <figure>
+        <img src="one-linux-box-hardware-filesystem-interfaces.png" alt="Diagram of one Linux box: hardware at the bottom, kernel and services in the middle, filesystem across, and interfaces at the top — with the AI operating zone in the CLI layer." loading="lazy" />
+        <figcaption>One Linux box: built from the hardware up, organized as a filesystem across, accessed through interfaces. Utility AIs land in the CLI layer — files, scripts, tools, and agents.</figcaption>
+      </figure>
+
+      <h3 id="pattern-examples">AI abstraction patterns 02 — major examples</h3>
+      <p class="small-note">Source: <code>localsend/ai-abstractions-patterns-02-list-major-examples.txt</code></p>
+
+      <div class="pattern-rows">
+      <div class="pattern-row">
+        <div class="pattern-card pattern-card--concept">
+          <h4>1. Compression and reconstruction</h4>
+          <p>AI compresses patterns into a smaller internal form, then reconstructs useful outputs from that compressed structure.</p>
+        </div>
+        <div class="pattern-card pattern-card--example">
+          <span class="card-kicker">Example</span>
+          <p>Summarizing a 50-page report into a one-page brief, then expanding the brief back into a slide deck.</p>
+        </div>
+      </div>
+      <div class="pattern-row">
+        <div class="pattern-card pattern-card--concept">
+          <h4>2. Conditional simulation</h4>
+          <p>A prompt sets the conditions for what kind of world, role, style, or task the model simulates.</p>
+        </div>
+        <div class="pattern-card pattern-card--example">
+          <span class="card-kicker">Example</span>
+          <p>&quot;Act like a senior Linux engineer debugging an i3 window manager issue&quot; produces a different reasoning mode than &quot;explain this to a beginner.&quot;</p>
+        </div>
+      </div>
+      <div class="pattern-row">
+        <div class="pattern-card pattern-card--concept">
+          <h4>3. Distribution shaping</h4>
+          <p>Prompts, examples, schemas, temperature, and tool choices reshape what outputs are likely.</p>
+        </div>
+        <div class="pattern-card pattern-card--example">
+          <span class="card-kicker">Example</span>
+          <p>Giving a JSON schema makes the model much more likely to produce valid machine-readable actions instead of loose prose.</p>
+        </div>
+      </div>
+      <div class="pattern-row">
+        <div class="pattern-card pattern-card--concept">
+          <h4>4. Latent-space navigation</h4>
+          <p>AI moves through compressed concept-space, connecting nearby meanings, analogies, formats, and structures.</p>
+        </div>
+        <div class="pattern-card pattern-card--example">
+          <span class="card-kicker">Example</span>
+          <p>Seeing that &quot;a browser tab,&quot; &quot;a document,&quot; &quot;a window,&quot; and &quot;an app state&quot; can all be treated as navigable objects.</p>
+        </div>
+      </div>
+      <div class="pattern-row">
+        <div class="pattern-card pattern-card--concept">
+          <h4>5. Attention allocation</h4>
+          <p>Intelligence often means deciding what matters right now and ignoring the rest.</p>
+        </div>
+        <div class="pattern-card pattern-card--example">
+          <span class="card-kicker">Example</span>
+          <p>In a long error log, the model identifies the three lines that actually explain the crash.</p>
+        </div>
+      </div>
+      <div class="pattern-row">
+        <div class="pattern-card pattern-card--concept">
+          <h4>6. Search over possibilities</h4>
+          <p>AI generates candidates, compares them, prunes weak options, and refines stronger ones.</p>
+        </div>
+        <div class="pattern-card pattern-card--example">
+          <span class="card-kicker">Example</span>
+          <p>Producing five possible architectures for a local agent harness, then selecting the simplest one that satisfies the constraints.</p>
+        </div>
+      </div>
+      <div class="pattern-row">
+        <div class="pattern-card pattern-card--concept">
+          <h4>7. Amortized reasoning and skill compression</h4>
+          <p>Training turns expensive repeated reasoning into fast reusable patterns. Repeated workflows can also become tools, macros, or skills.</p>
+        </div>
+        <div class="pattern-card pattern-card--example">
+          <span class="card-kicker">Example</span>
+          <p>Instead of reasoning from scratch every time, a coding assistant learns the common repair pattern for a broken import, missing dependency, or bad config path.</p>
+        </div>
+      </div>
+      <div class="pattern-row">
+        <div class="pattern-card pattern-card--concept">
+          <h4>8. Representation translation</h4>
+          <p>AI converts one representation into another: text to code, image to caption, prompt to UI, notes to outline, error log to diagnosis.</p>
+        </div>
+        <div class="pattern-card pattern-card--example">
+          <span class="card-kicker">Example</span>
+          <p>A messy spoken command becomes structured JSON, which becomes an i3 window action.</p>
+        </div>
+      </div>
+      <div class="pattern-row">
+        <div class="pattern-card pattern-card--concept">
+          <h4>9. Media transformation</h4>
+          <p>Digital media is increasingly one continuous substrate. An image is simultaneously a book, movie, audio track, website, app, interface, dataset, or product mockup, because each form is now only a prompt or transformation away.</p>
+        </div>
+        <div class="pattern-card pattern-card--example">
+          <span class="card-kicker">Example</span>
+          <p>A single concept image can become a storyboard, a narrated video, a landing page, an interactive prototype, a children&#x27;s book, or a 3D asset prompt.</p>
+        </div>
+      </div>
+      <div class="pattern-row">
+        <div class="pattern-card pattern-card--concept">
+          <h4>10. Constraint satisfaction</h4>
+          <p>Prompting is often constraint design: format, tone, facts, schema, length, safety, tool limits, and goal all compete.</p>
+        </div>
+        <div class="pattern-card pattern-card--example">
+          <span class="card-kicker">Example</span>
+          <p>&quot;Write this as valid YAML, under 40 lines, with no optional fields, compatible with systemd&quot; forces a much better output than &quot;make a config.&quot;</p>
+        </div>
+      </div>
+      <div class="pattern-row">
+        <div class="pattern-card pattern-card--concept">
+          <h4>11. Uncertainty management</h4>
+          <p>Good AI systems preserve ambiguity until they can verify or decide. Bad systems collapse uncertainty too early.</p>
+        </div>
+        <div class="pattern-card pattern-card--example">
+          <span class="card-kicker">Example</span>
+          <p>A diagnostic assistant says: &quot;Most likely A, possible B, unlikely C; run this command to distinguish them.&quot;</p>
+        </div>
+      </div>
+      <div class="pattern-row">
+        <div class="pattern-card pattern-card--concept">
+          <h4>12. Generator / critic separation</h4>
+          <p>One system proposes; another evaluates. These are different jobs even when done by the same model.</p>
+        </div>
+        <div class="pattern-card pattern-card--example">
+          <span class="card-kicker">Example</span>
+          <p>One model writes code, another checks whether it compiles, follows the spec, and avoids destructive commands.</p>
+        </div>
+      </div>
+      <div class="pattern-row">
+        <div class="pattern-card pattern-card--concept">
+          <h4>13. Feedback control</h4>
+          <p>An agent becomes useful when it observes the result of an action and corrects course.</p>
+        </div>
+        <div class="pattern-card pattern-card--example">
+          <span class="card-kicker">Example</span>
+          <p>The system opens a file, sees it was the wrong one, searches again, narrows the query, and opens the correct file.</p>
+        </div>
+      </div>
+      <div class="pattern-row">
+        <div class="pattern-card pattern-card--concept">
+          <h4>14. Policy over actions</h4>
+          <p>A policy maps the current state to the next move.</p>
+        </div>
+        <div class="pattern-card pattern-card--example">
+          <span class="card-kicker">Example</span>
+          <p>Given &quot;YouTube is already open, video is playing, user says &#x27;full screen,&#x27;&quot; the system chooses the fullscreen action instead of launching a new browser.</p>
+        </div>
+      </div>
+      <div class="pattern-row">
+        <div class="pattern-card pattern-card--concept">
+          <h4>15. Affordance detection</h4>
+          <p>AI detects what can be done with something.</p>
+        </div>
+        <div class="pattern-card pattern-card--example">
+          <span class="card-kicker">Example</span>
+          <p>It sees a spreadsheet and infers: sort, filter, summarize, validate formulas, detect outliers, generate charts.</p>
+        </div>
+      </div>
+      <div class="pattern-row">
+        <div class="pattern-card pattern-card--concept">
+          <h4>16. Ontology formation</h4>
+          <p>AI frames the problem by deciding what the objects, relationships, and categories are.</p>
+        </div>
+        <div class="pattern-card pattern-card--example">
+          <span class="card-kicker">Example</span>
+          <p>A vague request like &quot;my automation stack is getting messy&quot; becomes objects such as router, executor, skill registry, fallback model, logs, tests, and UI surface.</p>
+        </div>
+      </div>
+      <div class="pattern-row">
+        <div class="pattern-card pattern-card--concept">
+          <h4>17. Boundary placement</h4>
+          <p>System design depends on deciding what belongs inside the model, outside the model, in memory, in tools, in code, or in the runtime.</p>
+        </div>
+        <div class="pattern-card pattern-card--example">
+          <span class="card-kicker">Example</span>
+          <p>Let the model choose intent, but let deterministic code execute the window move.</p>
+        </div>
+      </div>
+      <div class="pattern-row">
+        <div class="pattern-card pattern-card--concept">
+          <h4>18. Scale-shifting</h4>
+          <p>AI moves up and down levels of abstraction.</p>
+        </div>
+        <div class="pattern-card pattern-card--example">
+          <span class="card-kicker">Example</span>
+          <p>It can turn 200 implementation details into one principle, then turn that principle back into concrete commands, files, or UI components.</p>
+        </div>
+      </div>
+      <div class="pattern-row">
+        <div class="pattern-card pattern-card--concept">
+          <h4>19. Style as filtering</h4>
+          <p>Style changes what information is emphasized.</p>
+        </div>
+        <div class="pattern-card pattern-card--example">
+          <span class="card-kicker">Example</span>
+          <p>The same incident report written in legal style emphasizes liability; in engineering style, root cause; in executive style, impact and next action.</p>
+        </div>
+      </div>
+      <div class="pattern-row">
+        <div class="pattern-card pattern-card--concept">
+          <h4>20. Controlled distortion</h4>
+          <p>Every transformation changes the input. The question is whether it preserves what matters.</p>
+        </div>
+        <div class="pattern-card pattern-card--example">
+          <span class="card-kicker">Example</span>
+          <p>A diagram simplifies reality, but if it preserves the causal structure, the distortion is useful.</p>
+        </div>
+      </div>
+      <div class="pattern-row">
+        <div class="pattern-card pattern-card--concept">
+          <h4>21. Synthetic sensing</h4>
+          <p>AI can detect latent properties that are not directly measured: tone, intent, salience, risk, ambiguity, contradiction, relevance.</p>
+        </div>
+        <div class="pattern-card pattern-card--example">
+          <span class="card-kicker">Example</span>
+          <p>A support bot detects that a user&#x27;s message is not just a question but an escalation risk.</p>
+        </div>
+      </div>
+      <div class="pattern-row">
+        <div class="pattern-card pattern-card--concept">
+          <h4>22. Semantic glue</h4>
+          <p>AI connects systems that were not designed to talk to each other.</p>
+        </div>
+        <div class="pattern-card pattern-card--example">
+          <span class="card-kicker">Example</span>
+          <p>A human says, &quot;Put my research notes into the client format,&quot; and the model bridges loose prose, file structure, template rules, and final document format.</p>
+        </div>
+      </div>
+      <div class="pattern-row">
+        <div class="pattern-card pattern-card--concept">
+          <h4>23. Entropy management</h4>
+          <p>AI alternates between expanding possibility and collapsing it into action.</p>
+        </div>
+        <div class="pattern-card pattern-card--example">
+          <span class="card-kicker">Example</span>
+          <p>Brainstorm 20 product names, narrow to five, test against constraints, choose one.</p>
+        </div>
+      </div>
+      <div class="pattern-row">
+        <div class="pattern-card pattern-card--concept">
+          <h4>24. Structure amplification</h4>
+          <p>Models amplify the structure already present in the input.</p>
+        </div>
+        <div class="pattern-card pattern-card--example">
+          <span class="card-kicker">Example</span>
+          <p>Give rough bullets and it produces a cleaner outline; give messy assumptions and it may amplify the mess unless challenged.</p>
+        </div>
+      </div>
+      <div class="pattern-row">
+        <div class="pattern-card pattern-card--concept">
+          <h4>25. Coordination and delegation</h4>
+          <p>AI can decide which tool, model, person, document, or process should handle each part of a task.</p>
+        </div>
+        <div class="pattern-card pattern-card--example">
+          <span class="card-kicker">Example</span>
+          <p>A research agent uses search for facts, a parser for PDFs, a model for synthesis, a critic for verification, and a formatter for final output.</p>
+        </div>
+      </div>
+      </div>
+
+      <h3 id="utility-ais">AI abstraction patterns 01 — utility AIs</h3>
+      <p>Each abstraction becomes a named role. That role maps to models and tools you can actually run.</p>
+      <p class="small-note">Source: <code>localsend/ai-abstractions-patterns-01-table-utility-ais.txt</code></p>
+
+      <div class="utility-grid">
+        <article class="utility-card">
+          <header class="utility-card-header">
+            <span class="utility-tag">Compression / reconstruction</span>
+            <h4>Summarizer / condenser</h4>
+          </header>
+          <div class="utility-visual">
+            <span class="utility-flow-label">At a glance</span>
+            <div class="utility-glyph-flow">
+<span class="utility-emoji">📚</span>
+            <span class="utility-emoji">📚</span>
+            <span class="utility-emoji">📚</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">🗜️</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">📄</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">📊</span>
+            </div>
+          </div>
+          <dl class="utility-facts">
+            <div class="utility-fact">
+              <dt>What it does</dt>
+              <dd>Compresses large information into smaller usable form, then expands when needed.</dd>
+            </div>
+            <div class="utility-fact utility-fact--example">
+              <dt>Example</dt>
+              <dd>Turn 200 pages of notes into a 2-page brief, then into a slide outline.</dd>
+            </div>
+            <div class="utility-fact utility-fact--tools">
+              <dt>Real-world model / tool</dt>
+              <dd>GPT-style small LLM, Qwen 2.5/3 small instruct, Gemma instruct</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="utility-card">
+          <header class="utility-card-header">
+            <span class="utility-tag">Conditional simulation</span>
+            <h4>Role simulator</h4>
+          </header>
+          <div class="utility-visual">
+            <span class="utility-flow-label">At a glance</span>
+            <div class="utility-glyph-flow">
+<span class="utility-emoji">🎭</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">🐧</span>
+            <span class="utility-emoji">🧑‍⚖️</span>
+            <span class="utility-emoji">👩‍🏫</span>
+            <span class="utility-emoji">📝</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">⚙️</span>
+            </div>
+          </div>
+          <dl class="utility-facts">
+            <div class="utility-fact">
+              <dt>What it does</dt>
+              <dd>Runs a task through a chosen frame: lawyer, Linux admin, teacher, critic, planner.</dd>
+            </div>
+            <div class="utility-fact utility-fact--example">
+              <dt>Example</dt>
+              <dd>“Act as a senior sysadmin and inspect this systemd unit.”</dd>
+            </div>
+            <div class="utility-fact utility-fact--tools">
+              <dt>Real-world model / tool</dt>
+              <dd>Any instruction-tuned LLM: Qwen, Gemma, Llama, Claude, GPT</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="utility-card">
+          <header class="utility-card-header">
+            <span class="utility-tag">Distribution shaping</span>
+            <h4>Router / intent classifier</h4>
+          </header>
+          <div class="utility-visual utility-visual--diagram">
+            <span class="utility-flow-label">Flow</span>
+            <div class="mermaid">
+flowchart LR
+  A["🎤 request"] --> B{"🔀 router"}
+  B -->|window| C["⚡ i3"]
+  B -->|why| D["🧠 LLM"]
+            </div>
+          </div>
+          <dl class="utility-facts">
+            <div class="utility-fact">
+              <dt>What it does</dt>
+              <dd>Chooses which path the request should take before a big model gets involved.</dd>
+            </div>
+            <div class="utility-fact utility-fact--example">
+              <dt>Example</dt>
+              <dd>“Move window left” goes to deterministic i3 executor; “why did this crash?” goes to LLM.</dd>
+            </div>
+            <div class="utility-fact utility-fact--tools">
+              <dt>Real-world model / tool</dt>
+              <dd>fastText, SetFit, DistilBERT, ModernBERT classifier</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="utility-card">
+          <header class="utility-card-header">
+            <span class="utility-tag">Latent-space navigation</span>
+            <h4>Embedder</h4>
+          </header>
+          <div class="utility-visual">
+            <span class="utility-flow-label">At a glance</span>
+            <div class="utility-glyph-flow">
+<span class="utility-emoji">📝</span>
+            <span class="utility-emoji">💻</span>
+            <span class="utility-emoji">🖼️</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">🗺️</span>
+            <span class="utility-arrow">···</span>
+            <span class="utility-emoji">🔍</span>
+            </div>
+          </div>
+          <dl class="utility-facts">
+            <div class="utility-fact">
+              <dt>What it does</dt>
+              <dd>Maps text, code, images, or docs into searchable semantic space.</dd>
+            </div>
+            <div class="utility-fact utility-fact--example">
+              <dt>Example</dt>
+              <dd>“Find files related to the thing I was working on yesterday” even if words do not exactly match.</dd>
+            </div>
+            <div class="utility-fact utility-fact--tools">
+              <dt>Real-world model / tool</dt>
+              <dd>BGE-M3, Qwen3-Embedding-0.6B, nomic-embed-text-v1.5, OpenAI text-embedding-3-small</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="utility-card">
+          <header class="utility-card-header">
+            <span class="utility-tag">Attention allocation</span>
+            <h4>Salience detector</h4>
+          </header>
+          <div class="utility-visual">
+            <span class="utility-flow-label">At a glance</span>
+            <div class="utility-glyph-flow">
+<span class="utility-emoji">📜</span>
+            <span class="utility-emoji">📜</span>
+            <span class="utility-emoji">📜</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">🔦</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">⚠️</span>
+            <span class="utility-chip">line 1842</span>
+            </div>
+          </div>
+          <dl class="utility-facts">
+            <div class="utility-fact">
+              <dt>What it does</dt>
+              <dd>Finds what matters inside noisy input.</dd>
+            </div>
+            <div class="utility-fact utility-fact--example">
+              <dt>Example</dt>
+              <dd>Pull the actual failure line out of a 3,000-line terminal log.</dd>
+            </div>
+            <div class="utility-fact utility-fact--tools">
+              <dt>Real-world model / tool</dt>
+              <dd>MiniLM classifier, BERT/ModernBERT classifier, small LLM judge</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="utility-card">
+          <header class="utility-card-header">
+            <span class="utility-tag">Search over possibilities</span>
+            <h4>Candidate generator + reranker</h4>
+          </header>
+          <div class="utility-visual utility-visual--diagram">
+            <span class="utility-flow-label">Flow</span>
+            <div class="mermaid">
+flowchart LR
+  A["📦 100"] --> B["📚 30"] --> C["🏆 top 5"] --> D["✅ answer"]
+            </div>
+          </div>
+          <dl class="utility-facts">
+            <div class="utility-fact">
+              <dt>What it does</dt>
+              <dd>Generates many possibilities, then ranks the best ones.</dd>
+            </div>
+            <div class="utility-fact utility-fact--example">
+              <dt>Example</dt>
+              <dd>Search 100 chunks, retrieve 30, rerank to the best 5 for the final answer.</dd>
+            </div>
+            <div class="utility-fact utility-fact--tools">
+              <dt>Real-world model / tool</dt>
+              <dd>BM25 + BGE-M3 + bge-reranker-v2-m3, Cohere Rerank, Jina Reranker v2</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="utility-card">
+          <header class="utility-card-header">
+            <span class="utility-tag">Amortized reasoning / skill compression</span>
+            <h4>Skill model / macro compiler</h4>
+          </header>
+          <div class="utility-visual">
+            <span class="utility-flow-label">At a glance</span>
+            <div class="utility-glyph-flow">
+<span class="utility-emoji">🔁</span>
+            <span class="utility-emoji">🔁</span>
+            <span class="utility-emoji">🔁</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">📦</span>
+            <span class="utility-chip">macro</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">⚡</span>
+            </div>
+          </div>
+          <dl class="utility-facts">
+            <div class="utility-fact">
+              <dt>What it does</dt>
+              <dd>Turns repeated behavior into a reusable command, route, or function.</dd>
+            </div>
+            <div class="utility-fact utility-fact--example">
+              <dt>Example</dt>
+              <dd>Convert “open YouTube and play this song fullscreen” into a reusable action block.</dd>
+            </div>
+            <div class="utility-fact utility-fact--tools">
+              <dt>Real-world model / tool</dt>
+              <dd>Small LLM + deterministic executor; fastText/SetFit router</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="utility-card">
+          <header class="utility-card-header">
+            <span class="utility-tag">Representation translation</span>
+            <h4>Compiler / translator</h4>
+          </header>
+          <div class="utility-visual">
+            <span class="utility-flow-label">At a glance</span>
+            <div class="utility-glyph-flow">
+<span class="utility-emoji">🗣️</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-chip">{json}</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">⌨️</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">🪟</span>
+            </div>
+          </div>
+          <dl class="utility-facts">
+            <div class="utility-fact">
+              <dt>What it does</dt>
+              <dd>Converts between natural language, JSON, code, SQL, shell, UI state, or config.</dd>
+            </div>
+            <div class="utility-fact utility-fact--example">
+              <dt>Example</dt>
+              <dd>Spoken command → JSON action → i3 command.</dd>
+            </div>
+            <div class="utility-fact utility-fact--tools">
+              <dt>Real-world model / tool</dt>
+              <dd>Qwen Coder, CodeLlama, StarCoder2, OmniCoder-style coding model</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="utility-card">
+          <header class="utility-card-header">
+            <span class="utility-tag">Media transformation</span>
+            <h4>Multimodal transformer</h4>
+          </header>
+          <div class="utility-visual">
+            <span class="utility-flow-label">At a glance</span>
+            <div class="utility-glyph-flow">
+<span class="utility-emoji">✏️</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">🌐</span>
+            <span class="utility-emoji">🎬</span>
+            <span class="utility-emoji">📱</span>
+            <span class="utility-emoji">🎵</span>
+            <span class="utility-emoji">📦</span>
+            </div>
+          </div>
+          <dl class="utility-facts">
+            <div class="utility-fact">
+              <dt>What it does</dt>
+              <dd>Converts one media type into another. Image, book, movie, audio, website, app, and dataset are now different surfaces of the same digital substrate, often only a prompt away.</dd>
+            </div>
+            <div class="utility-fact utility-fact--example">
+              <dt>Example</dt>
+              <dd>A sketch becomes a landing page, storyboard, video prompt, narration, app mockup, and product listing.</dd>
+            </div>
+            <div class="utility-fact utility-fact--tools">
+              <dt>Real-world model / tool</dt>
+              <dd>GPT-4o-style multimodal model, Gemini-style multimodal model, Qwen-VL, image/video/audio generators</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="utility-card">
+          <header class="utility-card-header">
+            <span class="utility-tag">Constraint satisfaction</span>
+            <h4>Validator / schema checker</h4>
+          </header>
+          <div class="utility-visual">
+            <span class="utility-flow-label">At a glance</span>
+            <div class="utility-glyph-flow">
+<span class="utility-chip">{action}</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">📏</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">✅</span>
+            <span class="utility-arrow">|</span>
+            <span class="utility-emoji">🚫</span>
+            </div>
+          </div>
+          <dl class="utility-facts">
+            <div class="utility-fact">
+              <dt>What it does</dt>
+              <dd>Checks whether output obeys rules, schemas, types, policies, or contracts.</dd>
+            </div>
+            <div class="utility-fact utility-fact--example">
+              <dt>Example</dt>
+              <dd>Validate that a model-produced JSON action is allowed before executing it.</dd>
+            </div>
+            <div class="utility-fact utility-fact--tools">
+              <dt>Real-world model / tool</dt>
+              <dd>JSON Schema, Pydantic, Guardrails, Outlines, LMQL-style constrained decoding</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="utility-card">
+          <header class="utility-card-header">
+            <span class="utility-tag">Uncertainty management</span>
+            <h4>Confidence estimator</h4>
+          </header>
+          <div class="utility-visual">
+            <span class="utility-flow-label">At a glance</span>
+            <div class="utility-glyph-flow">
+<span class="utility-chip">A 62%</span>
+            <span class="utility-chip">B 28%</span>
+            <span class="utility-chip">C 10%</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">🔬</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">✅</span>
+            </div>
+          </div>
+          <dl class="utility-facts">
+            <div class="utility-fact">
+              <dt>What it does</dt>
+              <dd>Keeps ambiguity alive instead of pretending the first answer is certain.</dd>
+            </div>
+            <div class="utility-fact utility-fact--example">
+              <dt>Example</dt>
+              <dd>“This looks like either a missing dependency or wrong path; run these two checks.”</dd>
+            </div>
+            <div class="utility-fact utility-fact--tools">
+              <dt>Real-world model / tool</dt>
+              <dd>Classifier probability scores, calibrated reranker scores, small LLM judge</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="utility-card">
+          <header class="utility-card-header">
+            <span class="utility-tag">Generator / critic separation</span>
+            <h4>Critic / judge</h4>
+          </header>
+          <div class="utility-visual">
+            <span class="utility-flow-label">At a glance</span>
+            <div class="utility-glyph-flow">
+<span class="utility-emoji">✍️</span>
+            <span class="utility-chip">draft</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">⚖️</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">✅</span>
+            <span class="utility-arrow">|</span>
+            <span class="utility-emoji">❌</span>
+            </div>
+          </div>
+          <dl class="utility-facts">
+            <div class="utility-fact">
+              <dt>What it does</dt>
+              <dd>Scores, rejects, or repairs candidate outputs.</dd>
+            </div>
+            <div class="utility-fact utility-fact--example">
+              <dt>Example</dt>
+              <dd>One model writes a shell command; another checks if it is destructive or wrong.</dd>
+            </div>
+            <div class="utility-fact utility-fact--tools">
+              <dt>Real-world model / tool</dt>
+              <dd>bge-reranker, Cohere Rerank, Llama Guard, Prometheus-style judge model</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="utility-card">
+          <header class="utility-card-header">
+            <span class="utility-tag">Feedback control</span>
+            <h4>Closed-loop agent</h4>
+          </header>
+          <div class="utility-visual utility-visual--diagram">
+            <span class="utility-flow-label">Flow</span>
+            <div class="mermaid">
+flowchart LR
+  G["🎯 goal"] --> A["⚡ act"] --> O["👀 observe"] --> E{"gap?"}
+  E -->|yes| A
+  E -->|no| D["✅ done"]
+            </div>
+          </div>
+          <dl class="utility-facts">
+            <div class="utility-fact">
+              <dt>What it does</dt>
+              <dd>Acts, observes the result, compares against goal, and corrects.</dd>
+            </div>
+            <div class="utility-fact utility-fact--example">
+              <dt>Example</dt>
+              <dd>Open file, inspect it, patch it, run test, see failure, patch again.</dd>
+            </div>
+            <div class="utility-fact utility-fact--tools">
+              <dt>Real-world model / tool</dt>
+              <dd>LLM agent loop + tools; LangGraph/LlamaIndex agents; deterministic harness</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="utility-card">
+          <header class="utility-card-header">
+            <span class="utility-tag">Policy over actions</span>
+            <h4>Action selector</h4>
+          </header>
+          <div class="utility-visual">
+            <span class="utility-flow-label">At a glance</span>
+            <div class="utility-glyph-flow">
+<span class="utility-emoji">🦊</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">🧠</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">🔍 focus</span>
+            <span class="utility-arrow">≠</span>
+            <span class="utility-emoji">🆕 open</span>
+            </div>
+          </div>
+          <dl class="utility-facts">
+            <div class="utility-fact">
+              <dt>What it does</dt>
+              <dd>Chooses the next action from a known action set.</dd>
+            </div>
+            <div class="utility-fact utility-fact--example">
+              <dt>Example</dt>
+              <dd>Given current window state, choose “focus existing Firefox” instead of opening a new one.</dd>
+            </div>
+            <div class="utility-fact utility-fact--tools">
+              <dt>Real-world model / tool</dt>
+              <dd>fastText classifier, SetFit classifier, small tool-calling LLM</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="utility-card">
+          <header class="utility-card-header">
+            <span class="utility-tag">Affordance detection</span>
+            <h4>UI/object affordance detector</h4>
+          </header>
+          <div class="utility-visual">
+            <span class="utility-flow-label">At a glance</span>
+            <div class="utility-glyph-flow">
+<span class="utility-emoji">🖼️</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">🔘</span>
+            <span class="utility-emoji">📝</span>
+            <span class="utility-emoji">☰</span>
+            <span class="utility-emoji">📊</span>
+            <span class="utility-emoji">📂</span>
+            </div>
+          </div>
+          <dl class="utility-facts">
+            <div class="utility-fact">
+              <dt>What it does</dt>
+              <dd>Detects what can be done with an object.</dd>
+            </div>
+            <div class="utility-fact utility-fact--example">
+              <dt>Example</dt>
+              <dd>A screenshot contains a button, text box, menu, table, and file picker; each affords different actions.</dd>
+            </div>
+            <div class="utility-fact utility-fact--tools">
+              <dt>Real-world model / tool</dt>
+              <dd>YOLO11, Grounding DINO, SAM 2, Florence-style vision model</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="utility-card">
+          <header class="utility-card-header">
+            <span class="utility-tag">Ontology formation</span>
+            <h4>Tagger / schema builder</h4>
+          </header>
+          <div class="utility-visual">
+            <span class="utility-flow-label">At a glance</span>
+            <div class="utility-glyph-flow">
+<span class="utility-emoji">📁</span>
+            <span class="utility-chip">mess</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">🗂️</span>
+            <span class="utility-emoji">📄</span>
+            <span class="utility-emoji">⚙️</span>
+            <span class="utility-emoji">🧪</span>
+            <span class="utility-emoji">📜</span>
+            </div>
+          </div>
+          <dl class="utility-facts">
+            <div class="utility-fact">
+              <dt>What it does</dt>
+              <dd>Decides what the objects and categories are.</dd>
+            </div>
+            <div class="utility-fact utility-fact--example">
+              <dt>Example</dt>
+              <dd>Turn a messy project folder into categories: docs, configs, scripts, logs, tests, generated files.</dd>
+            </div>
+            <div class="utility-fact utility-fact--tools">
+              <dt>Real-world model / tool</dt>
+              <dd>BERT classifier, SetFit, LLM extractor, LayoutLMv3 for documents</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="utility-card">
+          <header class="utility-card-header">
+            <span class="utility-tag">Boundary placement</span>
+            <h4>Guard / permission layer</h4>
+          </header>
+          <div class="utility-visual">
+            <span class="utility-flow-label">At a glance</span>
+            <div class="utility-glyph-flow">
+<span class="utility-emoji">🧠</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">🛡️</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">⚡</span>
+            <span class="utility-chip">needs</span>
+            <span class="utility-emoji">✋</span>
+            <span class="utility-chip">OK</span>
+            </div>
+          </div>
+          <dl class="utility-facts">
+            <div class="utility-fact">
+              <dt>What it does</dt>
+              <dd>Decides what belongs inside model output versus tool execution, memory, filesystem, or policy.</dd>
+            </div>
+            <div class="utility-fact utility-fact--example">
+              <dt>Example</dt>
+              <dd>Model may propose “delete file,” but executor requires explicit confirmation.</dd>
+            </div>
+            <div class="utility-fact utility-fact--tools">
+              <dt>Real-world model / tool</dt>
+              <dd>Llama Guard, OpenAI moderation, custom allowlist classifier</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="utility-card">
+          <header class="utility-card-header">
+            <span class="utility-tag">Scale-shifting</span>
+            <h4>Expander / reducer</h4>
+          </header>
+          <div class="utility-visual">
+            <span class="utility-flow-label">At a glance</span>
+            <div class="utility-glyph-flow">
+<span class="utility-emoji">🔬</span>
+            <span class="utility-arrow">⇅</span>
+            <span class="utility-emoji">🎯</span>
+            <span class="utility-arrow">⇅</span>
+            <span class="utility-emoji">📋</span>
+            <span class="utility-arrow">⇅</span>
+            <span class="utility-emoji">🧩</span>
+            </div>
+          </div>
+          <dl class="utility-facts">
+            <div class="utility-fact">
+              <dt>What it does</dt>
+              <dd>Moves between compressed and detailed levels.</dd>
+            </div>
+            <div class="utility-fact utility-fact--example">
+              <dt>Example</dt>
+              <dd>Turn one principle into five implementation examples, or five logs into one diagnosis.</dd>
+            </div>
+            <div class="utility-fact utility-fact--tools">
+              <dt>Real-world model / tool</dt>
+              <dd>General LLM, summarizer model, map-reduce summarization pipeline</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="utility-card">
+          <header class="utility-card-header">
+            <span class="utility-tag">Style as filtering</span>
+            <h4>Style transfer model</h4>
+          </header>
+          <div class="utility-visual">
+            <span class="utility-flow-label">At a glance</span>
+            <div class="utility-glyph-flow">
+<span class="utility-emoji">🔧</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">👔</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">⚖️</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">📖</span>
+            </div>
+          </div>
+          <dl class="utility-facts">
+            <div class="utility-fact">
+              <dt>What it does</dt>
+              <dd>Re-expresses the same content through a different cognitive lens.</dd>
+            </div>
+            <div class="utility-fact utility-fact--example">
+              <dt>Example</dt>
+              <dd>Technical note → executive summary → legal risk memo → beginner tutorial.</dd>
+            </div>
+            <div class="utility-fact utility-fact--tools">
+              <dt>Real-world model / tool</dt>
+              <dd>Instruction-tuned LLM, fine-tuned style model</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="utility-card">
+          <header class="utility-card-header">
+            <span class="utility-tag">Controlled distortion</span>
+            <h4>Format converter</h4>
+          </header>
+          <div class="utility-visual">
+            <span class="utility-flow-label">At a glance</span>
+            <div class="utility-glyph-flow">
+<span class="utility-emoji">📄</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-chip">{ }</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">📊</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">💰</span>
+            </div>
+          </div>
+          <dl class="utility-facts">
+            <div class="utility-fact">
+              <dt>What it does</dt>
+              <dd>Changes the form while preserving the important structure.</dd>
+            </div>
+            <div class="utility-fact utility-fact--example">
+              <dt>Example</dt>
+              <dd>PDF invoice → structured JSON → spreadsheet row → accounting entry.</dd>
+            </div>
+            <div class="utility-fact utility-fact--tools">
+              <dt>Real-world model / tool</dt>
+              <dd>PaddleOCR, Tesseract, LayoutLMv3, Donut-style document model</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="utility-card">
+          <header class="utility-card-header">
+            <span class="utility-tag">Synthetic sensing</span>
+            <h4>Semantic sensor</h4>
+          </header>
+          <div class="utility-visual">
+            <span class="utility-flow-label">At a glance</span>
+            <div class="utility-glyph-flow">
+<span class="utility-emoji">💬</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">👁️</span>
+            <span class="utility-emoji">🚨</span>
+            <span class="utility-emoji">😕</span>
+            <span class="utility-emoji">🎭</span>
+            <span class="utility-emoji">⚠️</span>
+            <span class="utility-emoji">🧭</span>
+            </div>
+          </div>
+          <dl class="utility-facts">
+            <div class="utility-fact">
+              <dt>What it does</dt>
+              <dd>Detects latent properties not directly visible as fields.</dd>
+            </div>
+            <div class="utility-fact utility-fact--example">
+              <dt>Example</dt>
+              <dd>Detect urgency, confusion, sarcasm, risk, intent, topic, or contradiction in text.</dd>
+            </div>
+            <div class="utility-fact utility-fact--tools">
+              <dt>Real-world model / tool</dt>
+              <dd>DistilBERT classifier, ModernBERT classifier, SetFit, Llama Guard</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="utility-card">
+          <header class="utility-card-header">
+            <span class="utility-tag">Semantic glue</span>
+            <h4>Adapter model</h4>
+          </header>
+          <div class="utility-visual utility-visual--diagram">
+            <span class="utility-flow-label">Flow</span>
+            <div class="mermaid">
+flowchart LR
+  H["👤 ask"] --> F["🔍 files"] --> O["👓 OCR"] --> D["🗄️ DB"] --> R["📑 report"]
+            </div>
+          </div>
+          <dl class="utility-facts">
+            <div class="utility-fact">
+              <dt>What it does</dt>
+              <dd>Connects systems that were not designed to communicate.</dd>
+            </div>
+            <div class="utility-fact utility-fact--example">
+              <dt>Example</dt>
+              <dd>Human request → file search → OCR → database → final report.</dd>
+            </div>
+            <div class="utility-fact utility-fact--tools">
+              <dt>Real-world model / tool</dt>
+              <dd>Embeddings + reranker + small LLM adapter</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="utility-card">
+          <header class="utility-card-header">
+            <span class="utility-tag">Entropy management</span>
+            <h4>Brainstormer / pruner</h4>
+          </header>
+          <div class="utility-visual">
+            <span class="utility-flow-label">At a glance</span>
+            <div class="utility-glyph-flow">
+<span class="utility-emoji">💡×20</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">🔽</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">✅×3</span>
+            </div>
+          </div>
+          <dl class="utility-facts">
+            <div class="utility-fact">
+              <dt>What it does</dt>
+              <dd>Expands possibilities, then collapses them into a decision.</dd>
+            </div>
+            <div class="utility-fact utility-fact--example">
+              <dt>Example</dt>
+              <dd>Generate 20 route names, filter by constraints, choose 3.</dd>
+            </div>
+            <div class="utility-fact utility-fact--tools">
+              <dt>Real-world model / tool</dt>
+              <dd>LLM generator + reranker/judge</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="utility-card">
+          <header class="utility-card-header">
+            <span class="utility-tag">Structure amplification</span>
+            <h4>Organizer / normalizer</h4>
+          </header>
+          <div class="utility-visual">
+            <span class="utility-flow-label">At a glance</span>
+            <div class="utility-glyph-flow">
+<span class="utility-emoji">• • •</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">📋</span>
+            <span class="utility-arrow">→</span>
+            <span class="utility-emoji">🗃️</span>
+            <span class="utility-chip">schema</span>
+            </div>
+          </div>
+          <dl class="utility-facts">
+            <div class="utility-fact">
+              <dt>What it does</dt>
+              <dd>Takes weak structure and makes it stronger.</dd>
+            </div>
+            <div class="utility-fact utility-fact--example">
+              <dt>Example</dt>
+              <dd>Messy bullets become a clean manifest, table, schema, or directory map.</dd>
+            </div>
+            <div class="utility-fact utility-fact--tools">
+              <dt>Real-world model / tool</dt>
+              <dd>Small instruct LLM, parser, formatter</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="utility-card">
+          <header class="utility-card-header">
+            <span class="utility-tag">Coordination / delegation</span>
+            <h4>Orchestrator</h4>
+          </header>
+          <div class="utility-visual utility-visual--diagram">
+            <span class="utility-flow-label">Flow</span>
+            <div class="mermaid">
+flowchart LR
+  V["🎤 voice"] --> A["VAD"] --> B["STT"] --> C{"router"}
+  C --> D["⚡ exec"]
+  C --> E["🧠 LLM"]
+            </div>
+          </div>
+          <dl class="utility-facts">
+            <div class="utility-fact">
+              <dt>What it does</dt>
+              <dd>Chooses which utility AI or tool handles each subtask.</dd>
+            </div>
+            <div class="utility-fact utility-fact--example">
+              <dt>Example</dt>
+              <dd>Voice command goes through VAD → STT → router → executor → optional LLM fallback.</dd>
+            </div>
+            <div class="utility-fact utility-fact--tools">
+              <dt>Real-world model / tool</dt>
+              <dd>Pipecat-style pipeline, LangGraph, LlamaIndex, custom harness</dd>
+            </div>
+          </dl>
+        </article>
+      </div>
+    </section>
+
     <footer>
       <p>Drafted from <code>words.txt</code> in <code>projects/how-to-use-ai-what-matters</code>.</p>
     </footer>
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: "neutral",
+      securityLevel: "loose",
+      fontFamily: "Arial, Helvetica, sans-serif",
+      flowchart: { curve: "basis", padding: 12, htmlLabels: true, nodeSpacing: 28, rankSpacing: 36 }
+    });
+  </script>
 </body>
 </html>
